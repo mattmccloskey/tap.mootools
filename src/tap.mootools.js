@@ -2,7 +2,6 @@
  * Custom tap event for MooTools
  */
 Element.Events.tap = {
-
 	onAdd: function() 
 	{
 		var startEvent = {},
@@ -48,30 +47,46 @@ Element.Events.tap = {
 			};
 		this.store('tapEvents', tapEvents).addEvents(tapEvents);
 	},
+
 	onRemove: function() 
 	{
-		this.removeEvents(this.retrieve('tapEvents'));
+		this.removeEvent('tap', this.retrieve('tapEvents'));
 	}
 };
 
-// Covert clicks to touch
+// Convert clicks to taps
 var isTouch = 'ontouchstart' in window || 'msmaxtouchpoints' in window.navigator;
-
-Element.Events.convertClicksToTaps = {
-	base: 'click',
-	condition: function(e) 
-	{
-		if (isTouch === true) return false;
-	},
-	onAdd: function() 
-	{
-		if (isTouch === true) 
+isTouch = true;
+if(isTouch && (typeof convertClicksToTaps == "undefined" || convertClicksToTaps !== false))
+{
+	var addFunc = Element.addEvent,
+		removeFunc = Element.removeEvent,
+		addFuncs = Element.addEvents,
+		removeFuncs = Element.removeEvents,
+		replaceClickWithTap = function() 
 		{
-			this.addEvent('tap', function(e)
+			if(typeof arguments[0] === 'string' && arguments[0].slice(0, 5) === 'click')
 			{
-				this.fireEvent('click', [e]);
-			});
+				arguments[0] = arguments[0].replace('click', 'tap');
+			}
+			return arguments;
+		};
+	Element.implement({
+		addEvent: function() 
+		{
+			return addFunc.apply(this, replaceClickWithTap.apply(this, arguments));
+		},
+		removeEvent: function() 
+		{
+			return removeFunc.apply(this, replaceClickWithTap.apply(this, arguments));
+		},
+		addEvents: function() 
+		{
+			return addFuncs.apply(this, replaceClickWithTap.apply(this, arguments));
+		},
+		removeEvents: function() 
+		{
+			return removeFuncs.apply(this, replaceClickWithTap.apply(this, arguments));
 		}
-	}
-};
-
+	});
+}

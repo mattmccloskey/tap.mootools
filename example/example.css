@@ -1,0 +1,18 @@
+body {
+	font-family: Helvetica;
+	text-align: center;
+}
+#pad {
+	width: 300px; 
+	height: 300px; 
+	margin: 2em auto; 
+	padding: 2em;
+	background: black; 
+	color: #fff;
+	text-align: center;
+}
+.alert {
+	visibility: hidden;
+	font-size: 3em;
+	font-weight: bold;
+}
