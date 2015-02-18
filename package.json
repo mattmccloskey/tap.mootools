@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "A custom tap event, and automatic click -> tap conversion",
   "main": "tap.mootools.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattmccloskey/tap.mootools.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,5 +16,13 @@
     "mootools"
   ],
   "author": "Matt McCloskey",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-plumber": "^0.6.5",
+    "gulp-jscs": "^1.4.0",
+    "gulp-jshint": "^1.9.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^0.3.1"
+  }
 }
