@@ -1,0 +1,16 @@
+{
+  "name": "tap.event.mootools",
+  "version": "1.0.0",
+  "description": "A custom tap event, and automatic click -> tap conversion",
+  "main": "tap.mootools.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tap",
+    "touch",
+    "mootools"
+  ],
+  "author": "Matt McCloskey",
+  "license": "MIT"
+}
