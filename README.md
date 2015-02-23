@@ -6,7 +6,8 @@ A custom tap event for MooTools + automatic click to tap conversion
 // Bower
 bower install --save tap-mootools
 ````
-#### How To Use
+How to use
+----------
 ```javascript
 $(el).addEvent('tap', function(e){
     // Tapped!
