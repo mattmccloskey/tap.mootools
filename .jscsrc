@@ -1,0 +1,24 @@
+{
+	"validateLineBreaks": null,
+	"disallowTrailingWhitespace": null,
+	"disallowKeywordsOnNewLine": [],
+	"disallowMixedSpacesAndTabs": true,
+	"disallowSpacesInFunctionExpression": null,
+    "disallowSpacesInNamedFunctionExpression": null,
+    "disallowSpacesInAnonymousFunctionExpression": null,
+    "disallowSpacesInsideArrayBrackets": true,
+    "requireSpacesInsideArrayBrackets": null,
+    "requireNewlineBeforeBlockStatements": true,
+    "disallowKeywordsOnNewLine": [],
+    "maximumLineLength": {
+        "value": 500,
+        "tabSize": 4,
+        "allowUrlComments": true,
+        "allowRegex": true
+    },
+    "requireKeywordsOnNewLine": ["else"],
+    "disallowOperatorBeforeLineBreak": ["+", "."],
+    "requireBlocksOnNewline": 1,
+    "validateParameterSeparator": ", ",
+    "requireSpaceBeforeObjectValues": true
+}

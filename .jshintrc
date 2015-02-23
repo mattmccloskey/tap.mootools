@@ -1,0 +1,13 @@
+{
+  "browser": true,
+  "undef": true,
+  "unused": false,
+  "jquery": true,
+  "quotmark": "double",
+  "eqeqeq": true,
+  "globals": {
+	"console": false,
+  	"_": false
+  }
+}
+
