@@ -1,5 +1,5 @@
 {
-  "name": "tap.event.mootools",
+  "name": "tap.mootools",
   "version": "1.0.0",
   "description": "A custom tap event, and automatic click -> tap conversion",
   "main": "tap.mootools.js",
