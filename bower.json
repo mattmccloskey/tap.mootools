@@ -2,6 +2,10 @@
   "name": "tap.mootools",
   "version": "1.0.0",
   "homepage": "https://github.com/mattmccloskey/tap.mootools",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mattmccloskey/tap.mootools.git"
+  },
   "description": "A custom tap event, and automatic click -> tap conversion",
   "main": "tap.mootools.js",
   "keywords": [
